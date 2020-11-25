@@ -1,11 +1,11 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/BotsCrewDB?allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
-    username: <username>
+    username: <user>
     password: <password>
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
-    show-sql: true
+    show-sql: false
     hibernate:
       ddl-auto: update
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
