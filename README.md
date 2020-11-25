@@ -12,7 +12,7 @@ Also it has MVC patern structure.
 
 ```git clone https://github.com/MrSpodaryk/BotsCrewTask.git```
 
-2. In application.yml(src/main/resources) change ```<user>``` and ```<password>``` to your own mysql username and password.
+2. In application.yaml(src/main/resources) change ```<user>``` and ```<password>``` to your own mysql username and password.
 
 3. Run mysql server : ```mysql.server start``` in your terminal/console
 
