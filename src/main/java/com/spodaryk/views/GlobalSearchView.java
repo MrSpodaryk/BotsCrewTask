@@ -16,22 +16,24 @@ public class GlobalSearchView {
 
     public void showResultsOfGlobalSearch(String template) {
 
-        List<Lector> allLectors = lectorController.getAllLectors();
-        List<Lector> filteredLectors;
+        List<String> filteredNameWithSurnameList;
+        List<String> nameWithSurnameList;
+
+        nameWithSurnameList = lectorController.getAllLectors().stream()
+                .map(lector -> lector.getName() + " " + lector.getSurname())
+                .collect(Collectors.toList());
 
         String regex = ".*" + template + ".*";
 
-        filteredLectors = allLectors.stream().filter(lector ->
-                lector.getName().matches(regex) || lector.getSurname().matches(regex))
+        filteredNameWithSurnameList = nameWithSurnameList.stream().filter(item ->
+                item.matches(regex))
                 .collect(Collectors.toList());
 
-        if (filteredLectors.size() == 0) {
+        if (filteredNameWithSurnameList.size() == 0) {
             System.out.println("There is no matches with \"" + template + "\" template\n");
         } else {
             System.out.println("What i found using \"" + template + "\" template:\n");
-            for (Lector lector : filteredLectors) {
-                System.out.println(lector.getName() + " " + lector.getSurname());
-            }
+            filteredNameWithSurnameList.forEach(System.out::println);
             System.out.println();
         }
     }

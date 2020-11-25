@@ -110,7 +110,7 @@ public class ApplicationView implements CommandLineRunner {
                 countOfEmployeeView.showNumberOfEmployeeInDepartment(scanner.nextLine().toUpperCase());
                 break;
             case "5":
-                System.out.println("\nPlease enter the name OR surname OR another template without spaces inside");
+                System.out.println("\nPlease enter the template");
                 globalSearchView.showResultsOfGlobalSearch(scanner.nextLine());
                 break;
         }
