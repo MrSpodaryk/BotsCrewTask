@@ -1,7 +1,6 @@
 package com.spodaryk.views;
 
 import com.spodaryk.controllers.LectorController;
-import com.spodaryk.models.Lector;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
